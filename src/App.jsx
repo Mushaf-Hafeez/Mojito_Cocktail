@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const App = () => {
   return (
-    <main className="min-h-screen w-full">
+    <main className="min-h-screen w-full bg-zinc-950 text-white">
       <Navbar />
       <Hero />
     </main>

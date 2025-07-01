@@ -1,28 +1,44 @@
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
 import { navLinks } from "../../constants";
 
 const Navbar = () => {
+  useGSAP(() => {
+    gsap.to("#nav", {
+      backgroundColor: "#00000050",
+      backdropFilter: "blur(10px)",
+      scrollTrigger: {
+        trigger: "#nav",
+        start: "bottom top",
+        markers: true,
+        ease: "power1.inOut",
+        scrub: true,
+      },
+    });
+  }, []);
+
   return (
-    <header>
+    <nav
+      id="nav"
+      className="px-20 py-5 flex items-center justify-between bg-transparent fixed w-full z-50"
+    >
       {/* logo */}
-      <h3>
-        <a
-          href="#hero"
-          className="flex items-center gap-2 text-2xl cursor-pointer font-modern"
-        >
-          <img src={"/images/logo.png"} alt="logo" />
-          Velvet Pour
-        </a>
+      <h3 className="flex items-center gap-2 cursor-pointer">
+        <img src="./images/logo.png" alt="logo" />
+        <p className="text-3xl font-modern-negra mt-3">Mojito Cocktail</p>
       </h3>
 
-      {/* links */}
-      <ul className="flex items-center gap-6 font-poppins text-md">
-        {navLinks.map((link, index) => (
-          <li key={index} className="whitespace-nowrap">
-            <a href={`#${link.id}`}>{link.title}</a>
+      {/* navlinks */}
+      <ul className="flex items-center gap-7 text-sm">
+        {navLinks.map((link) => (
+          <li key={link.id} className="cursor-pointer">
+            <a href={`#${link.id}`}></a>
+            {link.title}
           </li>
         ))}
       </ul>
-    </header>
+    </nav>
   );
 };
 
