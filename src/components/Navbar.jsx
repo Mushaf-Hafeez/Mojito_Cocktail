@@ -11,7 +11,6 @@ const Navbar = () => {
       scrollTrigger: {
         trigger: "#nav",
         start: "bottom top",
-        markers: true,
         ease: "power1.inOut",
         scrub: true,
       },

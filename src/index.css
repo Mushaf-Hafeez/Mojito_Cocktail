@@ -9,6 +9,14 @@
 }
 
 @theme {
+  --color-yellow: #e7d393;
   --font-poppins: "Poppins", serif;
   --font-modern-negra: "Modern Negra", serif;
+}
+
+.gradient {
+  background: linear-gradient(to bottom, #ffffff, #898989);
+  -webkit-background-clip: "text";
+  background-clip: text;
+  color: transparent;
 }
