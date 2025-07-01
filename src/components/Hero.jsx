@@ -19,10 +19,35 @@ const Hero = () => {
       delay: 1,
       stagger: 0.1,
     });
+
+    gsap.to("#left-leaf", {
+      yPercent: -100,
+      ease: "power2.in",
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+
+    gsap.to("#right-leaf", {
+      yPercent: 50,
+      ease: "power2.in",
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
   }, []);
 
   return (
-    <section className="relative min-h-screen w-full pt-10 bg-[url('./images/noise.png')]">
+    <section
+      id="hero"
+      className="relative min-h-screen w-full pt-10 bg-[url('./images/noise.png')] overflow-hidden"
+    >
       {/* main heading */}
       <h1 id="heading" className="text-[20vw] font-modern-negra text-center">
         MOJITO
@@ -49,6 +74,20 @@ const Hero = () => {
           </a>
         </div>
       </div>
+
+      <img
+        id="left-leaf"
+        src="./images/hero-left-leaf.png"
+        alt="left-leaf"
+        className="absolute top-28"
+      />
+
+      <img
+        id="right-leaf"
+        src="./images/hero-right-leaf.png"
+        alt="right-leaf"
+        className="absolute bottom-10 right-0"
+      />
     </section>
   );
 };
