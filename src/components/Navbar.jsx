@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <nav
       id="nav"
-      className="px-20 py-5 flex items-center justify-between bg-transparent fixed w-full z-50"
+      className="text-gray-100 px-20 py-5 flex items-center justify-between bg-transparent fixed w-full z-50"
     >
       {/* logo */}
       <h3 className="flex items-center gap-2 cursor-pointer">

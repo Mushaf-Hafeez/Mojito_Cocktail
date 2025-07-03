@@ -4,15 +4,16 @@ import { useGSAP } from "@gsap/react";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Cocktails from "./components/Cocktails";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const App = () => {
   return (
-    <main className="min-h-screen w-full bg-zinc-950 text-white">
+    <main className="bg-zinc-950 w-full overflow-x-hidden">
       <Navbar />
       <Hero />
-      <div className="min-h-[200vh]"></div>
+      <Cocktails />
     </main>
   );
 };
