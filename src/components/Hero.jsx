@@ -66,10 +66,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <>
+    <div className="h-screen w-full relative inset-0">
       <section
         id="hero"
-        className="relative min-h-screen w-full pt-10 bg-[url('./images/noise.png')] overflow-hidden"
+        className="relative z-40 min-h-screen w-full pt-10 bg-[url('./images/noise.png')] overflow-hidden"
       >
         <div className="absolute z-40 inset-0 bg-transparent">
           {/* main heading */}
@@ -82,7 +82,7 @@ const Hero = () => {
 
           <div className="flex px-20 items-center justify-between">
             <div className="sub-titles flex flex-col gap-2">
-              <p className="text-lg">Cool. Crisp. Classic.</p>
+              <p className="text-lg text-gray-100">Cool. Crisp. Classic.</p>
               <p className="w-80 font-modern-negra text-yellow text-6xl flex-wrap">
                 Sip the Spirit of Summer
               </p>
@@ -118,20 +118,18 @@ const Hero = () => {
         </div>
       </section>
 
-      <div
-        id="video-container"
-        className="absolute inset-0 z-30 h-screen w-full"
-      >
+      <div id="video-container" className="absolute z-30 inset-0 h-full w-full">
         <video
+          className="absolute z-30 inset-0 w-full"
           ref={videoRef}
           muted
           playsInline
           preload="auto"
-          src="./videos/output.mp4"
-          className="absolute z-30 bottom-0 h-screen w-full pointer-events-none"
-        />
+        >
+          <source src="./videos/output.mp4" />
+        </video>
       </div>
-    </>
+    </div>
   );
 };
 
