@@ -6,22 +6,25 @@ import { cocktailLists, mockTailLists } from "../../constants/index";
 const Cocktails = () => {
   useGSAP(() => {
     gsap.to("#c-left-leaf", {
-      left: 100,
-      bottom: 100,
+      x: 80,
+      y: -80,
+      duration: 0.5,
       scrollTrigger: {
         trigger: "#cocktail",
-        start: "70% 70%",
-        end: "bottom bottom",
+        start: "top 30%",
+        end: "bottom 80%",
+        markers: true,
+        scrub: true,
       },
     });
-
     gsap.to("#c-right-leaf", {
-      right: 100,
-      bottom: 100,
+      x: -80,
+      y: -80,
       scrollTrigger: {
         trigger: "#cocktail",
-        start: "70% 70%",
-        end: "bottom bottom",
+        start: "top 30%",
+        end: "bottom 80%",
+        scrub: true,
       },
     });
   }, []);
@@ -29,7 +32,7 @@ const Cocktails = () => {
   return (
     <section
       id="cocktail"
-      className="relative z-30 min-h-screen w-full bg-[url('./images/noise.png')] bg-center px-24 py-10 text-gray-100"
+      className="relative z-40 min-h-screen w-full bg-[url('./images/noise.png')] bg-center px-24 py-10 text-gray-100 overflow-hidden"
     >
       <div className="flex items-center justify-between">
         {/* Popular Cocktails */}
@@ -76,14 +79,14 @@ const Cocktails = () => {
         id="c-left-leaf"
         src="./images/cocktail-left-leaf.png"
         alt="c-leaft-leaf"
-        className="absolute left-0 bottom-0"
+        className="absolute -left-20 -bottom-20"
       />
 
       <img
         id="c-right-leaf"
         src="./images/cocktail-right-leaf.png"
         alt="c-right-leaf"
-        className="absolute right-0 bottom-0"
+        className="absolute -right-20 -bottom-20"
       />
     </section>
   );
