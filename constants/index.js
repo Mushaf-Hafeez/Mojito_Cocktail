@@ -1,6 +1,6 @@
 const navLinks = [
   {
-    id: "cocktails",
+    id: "cocktail",
     title: "Cocktails",
   },
   {

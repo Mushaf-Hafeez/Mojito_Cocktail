@@ -8,6 +8,15 @@
   src: url("/fonts/Modern Negra Demo.ttf") format("truetype");
 }
 
+html,
+body {
+  width: 100%;
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 @theme {
   --color-yellow: #e7d393;
   --font-poppins: "Poppins", serif;

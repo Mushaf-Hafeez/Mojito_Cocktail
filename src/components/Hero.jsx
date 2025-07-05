@@ -95,7 +95,7 @@ const Hero = () => {
               </p>
               <a
                 className="text-xl font-semibold text-gray-300 cursor-pointer"
-                href="#cocktails"
+                href="#cocktail"
               >
                 View Cocktails
               </a>
