@@ -16,6 +16,26 @@ const About = () => {
         start: "top 60%",
       },
     });
+
+    gsap.from("#top-grid", {
+      opacity: 0,
+      y: 50,
+      duration: 0.6,
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top 35%",
+      },
+    });
+
+    gsap.from("#bottom-grid", {
+      opacity: 0,
+      y: 50,
+      duration: 0.6,
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top -10%",
+      },
+    });
   }, []);
 
   return (
@@ -71,6 +91,18 @@ const About = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* images */}
+      <div id="top-grid" className="mt-8 flex items-center justify-evenly">
+        <img src="./images/abt1.png" alt="" />
+        <img src="./images/abt2.png" alt="" />
+        <img src="./images/abt5.png" alt="" className="size-72 rounded-xl" />
+      </div>
+
+      <div id="bottom-grid" className="mt-8 flex items-center justify-evenly">
+        <img src="./images/abt3.png" alt="" className="rounded-xl" />
+        <img src="./images/abt4.png" alt="" />
       </div>
     </section>
   );

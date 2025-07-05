@@ -69,7 +69,7 @@ const Hero = () => {
     <div className="h-screen w-full relative inset-0">
       <section
         id="hero"
-        className="relative z-40 min-h-screen w-full pt-10 bg-[url('./images/noise.png')] overflow-hidden"
+        className="relative z-40 h-full w-full pt-10 bg-[url('./images/noise.png')] overflow-hidden"
       >
         <div className="absolute z-40 inset-0 bg-transparent">
           {/* main heading */}
@@ -118,7 +118,10 @@ const Hero = () => {
         </div>
       </section>
 
-      <div id="video-container" className="absolute z-30 inset-0 h-full w-full">
+      <div
+        id="video-container"
+        className="absolute z-30 inset-0 h-screen w-full"
+      >
         <video
           className="absolute z-30 inset-0 w-full"
           ref={videoRef}

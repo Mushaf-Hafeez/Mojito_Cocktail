@@ -31,7 +31,7 @@ const Cocktails = () => {
   return (
     <section
       id="cocktail"
-      className="relative z-40 min-h-[123vh] w-full bg-[url('./images/noise.png')] bg-center px-24 py-10 text-gray-100 overflow-hidden"
+      className="relative z-40 min-h-screen w-full bg-[url('./images/noise.png')] bg-center px-24 py-10 text-gray-100 overflow-hidden"
     >
       <div className="flex items-center justify-between">
         {/* Popular Cocktails */}
