@@ -45,3 +45,10 @@ body {
   background-clip: text;
   color: #2e2e2e4b;
 }
+
+.mask-img {
+  mask-image: url("./images/mask-img.png");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+}
