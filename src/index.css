@@ -23,6 +23,10 @@ body {
   --font-modern-negra: "Modern Negra", serif;
 }
 
+.noise-img {
+  background-image: url("/images/noise.png");
+}
+
 .gradient {
   background: linear-gradient(to bottom, #ffffff, #898989);
   -webkit-background-clip: "text";
@@ -47,7 +51,7 @@ body {
 }
 
 .mask-img {
-  mask-image: url("./images/mask-img.png");
+  mask-image: url("/images/mask-img.png");
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: 100%;

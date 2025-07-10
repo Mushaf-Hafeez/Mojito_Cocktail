@@ -67,7 +67,7 @@ const About = () => {
             </div>
 
             {/* customers */}
-            <div className="flex items-center bg-zinc-900 px-4 py-2 rounded-full bg-[url('./images/noise.png')] relative w-38">
+            <div className="flex items-center bg-zinc-900 px-4 py-2 rounded-full noise-img relative w-38">
               <img
                 className="size-10 absolute z-[1] left-4"
                 src="./images/profile1.png"

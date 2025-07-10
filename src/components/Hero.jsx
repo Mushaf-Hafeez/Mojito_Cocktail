@@ -69,7 +69,7 @@ const Hero = () => {
     <div className="h-screen w-full relative inset-0">
       <section
         id="hero"
-        className="relative z-40 h-full w-full pt-10 bg-[url('./images/noise.png')] overflow-hidden"
+        className="relative z-40 h-full w-full pt-10 noise-img overflow-hidden"
       >
         <div className="absolute z-40 inset-0 bg-transparent">
           {/* main heading */}
