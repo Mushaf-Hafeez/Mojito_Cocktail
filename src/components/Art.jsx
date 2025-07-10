@@ -52,7 +52,7 @@ const Art = () => {
         {/* main image */}
         <div className="cocktail-img">
           <img
-            src="./images/under-img.jpg"
+            src="/images/under-img.jpg"
             alt="under image"
             className="mask-img absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6/12 rounded-2xl"
           />
