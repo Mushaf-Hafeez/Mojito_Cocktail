@@ -1,15 +1,44 @@
-import React, { useState } from "react";
-import { allCocktails, cocktailLists } from "../../constants";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useState } from "react";
+import { allCocktails } from "../../constants";
+import { SplitText } from "gsap/all";
 
 const Meun = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  console.log(currentIndex);
 
   const goToSlide = (index) => {
     const newIndex = (index + allCocktails.length) % allCocktails.length;
     setCurrentIndex(newIndex);
   };
+
+  useGSAP(() => {
+    const splitTitle = SplitText.create("#cocktail-title", { type: "words" });
+    const splitContent = SplitText.create("#cocktail-content", {
+      type: "words",
+    });
+
+    gsap.from("#slider-img", {
+      opacity: 0,
+      xPercent: -70,
+      duration: 0.8,
+      ease: "power1.inOut",
+    });
+
+    gsap.from(splitTitle.words, {
+      opacity: 0,
+      yPercent: 50,
+      duration: 0.4,
+      ease: "power1.inOut",
+    });
+
+    gsap.from(splitContent.words, {
+      opacity: 0,
+      yPercent: 50,
+      duration: 0.4,
+      ease: "power1.inOut",
+    });
+  }, [currentIndex]);
 
   return (
     <section className="relative radial-gradient -min-h-screen w-full text-gray-100 px-24 py-20 flex flex-col items-center justify-between">
@@ -31,7 +60,7 @@ const Meun = () => {
       </div>
 
       {/* Slider section */}
-      <div className="h-8/12 w-full flex justify-between mt-20">
+      <div className="h-[80vh] w-full flex justify-between mt-2">
         <img
           onClick={() => goToSlide(currentIndex - 1)}
           src="./images/left-arrow.png"
@@ -39,6 +68,7 @@ const Meun = () => {
           className="h-fit self-center"
         />
         <img
+          id="slider-img"
           src={allCocktails[currentIndex].image}
           alt=""
           className="object-cover"
@@ -51,21 +81,32 @@ const Meun = () => {
         />
       </div>
 
-      <div className="w-full flex items-center justify-between font-poppins absolute z-30 bottom-0 px-24">
-        <div className="flex flex-col gap-2">
+      <div className="w-full flex items-center justify-between font-poppins absolute z-30 bottom-0 px-52">
+        <div id="cocktail-title" className="flex flex-col gap-2">
           <p>Recipes for:</p>
           <h2 className="text-6xl font-modern-negra text-yellow">
             {allCocktails[currentIndex].name}
           </h2>
         </div>
 
-        <div className="w-96 flex flex-col gap-2">
+        <div id="cocktail-content" className="w-96 flex flex-col gap-2">
           <h2 className="text-6xl font-serif">
             {allCocktails[currentIndex].title}
           </h2>
           <p>{allCocktails[currentIndex].description}</p>
         </div>
       </div>
+
+      <img
+        src="./images/cocktail-left-leaf.png"
+        alt="c-left-leaf"
+        className="absolute left-0 bottom-0"
+      />
+      <img
+        src="./images/cocktail-right-leaf.png"
+        alt="c-right-leaf"
+        className="absolute right-0 top-0"
+      />
     </section>
   );
 };
