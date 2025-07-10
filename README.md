@@ -1,12 +1,38 @@
-# React + Vite
+# Mojito Cocktail 🍹
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautifully designed web application to discover and explore cocktail recipes — starting with the legendary Mojito! Built with modern web technologies and deployed on Vercel.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live version here: [mojito-cocktail-ten.vercel.app](https://mojito-cocktail-ten.vercel.app)
 
-## Expanding the ESLint configuration
+## 🧠 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🧃 View Mojito recipe with ingredients and instructions
+- 🔍 Search cocktails by name (optional)
+- 📱 Responsive design for all screen sizes
+- 🎨 Clean UI built with Tailwind CSS (or your framework)
+- ⚡ Fast loading via Vite (if used)
+
+## 📁 Tech Stack
+
+- React.js
+- Tailwind CSS (optional)
+- Vite or Create React App
+- Deployed on Vercel
+
+## 🛠️ Getting Started
+
+To run this project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/Mushaf-Hafeez/Mojito_Cocktail.git
+cd Mojito_Cocktail
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
