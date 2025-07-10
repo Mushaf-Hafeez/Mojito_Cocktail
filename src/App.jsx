@@ -9,6 +9,7 @@ import Cocktails from "./components/Cocktails";
 import About from "./components/About";
 import Art from "./components/Art";
 import Meun from "./components/Meun";
+import Footer from "./components/Footer";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -24,6 +25,7 @@ const App = () => {
       <About />
       <Art />
       <Meun />
+      <Footer />
     </main>
   );
 };

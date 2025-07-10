@@ -98,12 +98,12 @@ const Meun = () => {
       </div>
 
       <img
-        src="./images/cocktail-left-leaf.png"
+        src="./images/slider-left-leaf.png"
         alt="c-left-leaf"
         className="absolute left-0 bottom-0"
       />
       <img
-        src="./images/cocktail-right-leaf.png"
+        src="./images/slider-right-leaf.png"
         alt="c-right-leaf"
         className="absolute right-0 top-0"
       />
